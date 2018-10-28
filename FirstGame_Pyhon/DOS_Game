@@ -1,0 +1,104 @@
+#copyright by DB-Dev 2018
+#copyright by DB-Dev 2018
+#copyright by DB-Dev 2018
+
+
+### Master Übersicht
+hp = "100%"
+mp = "100%"
+enemy = "Bat"
+ehp = "100%"
+emp = "100%"
+
+### Das Menü
+menü = input (''' 
+    Willkommen in Pythonia, wähle aus was du tun möchtest und gebe dies ein.
+
+    \n\t Spiel Starten 
+    \n\t Spiel Laden *nicht verfügbar*
+    \n\t Steuerung
+    \n\t Verlassen
+
+''')
+### Anleitung
+if (menü == "Steuerung"):
+    print (''' 
+        Das Spiel ist in Textbasiert, old Times und so...ja gut ich Spiele grade mit Python rum um es richtig zu lernen...
+        \n\t Also es geht so, du gibst den vorgegebenen Text der erscheint ein und somit komunizierst du mit dem Spiel/PC was auch immer...
+        \n\t 
+        \n\t Stell dir einfach vor das ist eine Art RPG also ein Rollenspiel wo du momentan in Gefangenschafft bist und iwie da raus musst.
+        \n\t
+        \n\t Ja und so läuft das ab, falls du Fragen oder Kritik hast wende dich an mich der dir das gegeben hat ;) Achja! Das Spiel ist noch im Early Acces bald auf Steam :P
+        ''')
+   
+    ### Zum Menü zurück. keine ahnung.... :D
+
+        
+
+### Der Redner.
+if (menü == "Spiel Starten"):
+        print ("Willkommen, wie heißt dein Charackter? "), 
+        you = input("Gebe dein Name ein: ")
+        print ("Hallo, ", you)
+### In Gefangenschafft Kapitel.1
+gef1 = input (''' 
+    Du bist in einem Gefängnis gefangen und hast Hunger, vor dir ist auf dem Tisch ein Apfel.
+    
+    Was tust du?
+
+    \n\t nehmen 
+    \n\t anschauen
+    \n\t nichts
+
+''')
+### Die Wahl Kp.1
+if (gef1 == "nehmen"):
+        print ("Du hast ein Apfel aufgehoben."),
+        essen = input ("Möchtest du den Apfel jetzt Essen? ")
+        if (essen == "ja"):
+            print ("Du hast den Apfel gegessen, der Apfel war Verdorben und du bist dran gestorben.")
+            exit
+        if (essen == "nein"):
+            print ("Der Apfel wurde in deiner Tasche gelegt.")
+### Inspizieren des Gegenstandes
+if (gef1 == "anschauen"):
+    print ("Du schaust den Apfel an und bemerkst das er schon Verdorben ist, was tust du damit? ")
+
+### Verdorbener Apfel
+apfel_ver = input(''' 
+    \n\t schmeißen
+    \n\t essen
+    \n\t entkernen
+
+''')
+### Aktion aus dem Apfel
+if (apfel_ver == "schmeißen"):
+    print ("Du schmeißt den Apfel gegen das Gitter der Zelle und wurdest von einer Wache bemerkt.")
+
+### Wache Kp.1
+wache1 = input (''' 
+    Hey, was soll das werden!!???
+    
+    Du Antwortest:
+
+    \n\t ich war das nicht
+    \n\t lass mich hier raus
+    \n\t ich hab gehört das deine mutter stinkt
+
+''')
+
+if (wache1 == "ich hab gehört das deine mutter stinkt"):
+    print ("Die Wache öffnet deine Zelle und ramt dir ein Schwert in den Anus. Glück Wunsch du bist tot.")
+    exit
+
+
+
+
+
+
+### Spiel Verlassen
+if (menü == "Verlassen"):
+        print ("Bis nächstes mal.")
+        exit
+
+
